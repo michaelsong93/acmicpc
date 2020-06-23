@@ -6,8 +6,11 @@ int main(){
     int num = A*B*C;
     
     char str[15];
-    sprintf(str, "%d", num);
-    
+    sprintf(str, "%d", num); //sprintf to store each num to str array
+    // for(int i = 0; i < sizeof(str); i++){
+    //     printf("num:%c \n", str[i]);
+    // }
+
     int count_0 = 0;
     int count_1 = 0;
     int count_2 = 0;
@@ -19,6 +22,7 @@ int main(){
     int count_8 = 0;
     int count_9 = 0;
     
+    //for counting each num
     for(int i = 0; i < 15; i++){
         if(str[i] == '0'){
             count_0++;
