@@ -8,6 +8,7 @@ int main(){
     }
 
     int score = 0;
+    //arr[10]={ (score = 0), [score + arr[i]], [] []...
     for(int i = 0; i < 10; i++){
         if(abs(score + arr[i] - 100) <= abs(score - 100)){
             score = score + arr[i];
