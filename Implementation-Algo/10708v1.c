@@ -5,14 +5,18 @@ int main(){
     scanf("%d%d", &studentsNum, &gamesNum);
     
     int targetNum[gamesNum];
-    int index = 0;
-    char temp;
-    while(scanf("%d%c", &targetNum[index],&temp)){
-        index++;
-        if(temp == '\n'){
-            break;
-        }
+    
+    for(int i = 0; i < gamesNum; i++){
+        scanf("%d", &targetNum[i]);
     }
+    // int index = 0;
+    // char temp;
+    // while(scanf("%d%c", &targetNum[index],&temp)){
+    //     index++;
+    //     if(temp == '\n'){
+    //         break;
+    //     }
+    // }
 
     //     for(int i =0; i < gamesNum; i++){
     //     printf("%d\n", targetNum[i]);
@@ -31,26 +35,25 @@ int main(){
 //         }
 //         printf("\n");
 //     }
-
+    
     int scoreBoard[studentsNum];
+    for(int i = 0; i < studentsNum; i++){
+        scoreBoard[i] = 0;
+    }
+    
     for(int i = 0; i < gamesNum; i++){
         for(int j = 0; j < studentsNum; j++){
             if(targetNum[i] == studentBoard[i][j]){
-                scoreBoard[j] += 1;
-                if(targetNum[i] == j+1){
-                    scoreBoard[j] += 1;
-                }
+                scoreBoard[j]++;
             }
-            
+            else{
+                scoreBoard[targetNum[i]-1]++;
+            }
         }
     }
-ㅁ
 
- 
-    for(int i =0; i < 3; i++){
+    for(int i =0; i < studentsNum; i++){
         printf("%d\n", scoreBoard[i]);
     }
-
-
     return 0;
 }
