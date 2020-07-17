@@ -19,10 +19,11 @@ int main(){
     
     // For 2 & 3. 
     for(int i = 0; i < playersNum; i++){
-        scanf("%s", playersList[i]);
+        //same as scanf("%s", playersList[i]);
+        scanf("%s", &playersList[i][0]);
         count[playersList[i][0] - 'a']++;
     }
-    
+
     // For 4. 
     int check = 0;
     for(int i = 0; i < 26; i++){
