@@ -26,13 +26,15 @@ int main(){
             max = alphabet[i];
             max_alpha = 65 + i;
         }
-        else if(max == alphabet[i] && alphabet[i] != 0){
-            flag = 1;
+    }
+    
+    for(int i = 0; i < 26; i++){
+        if(alphabet[i] == max){
+            flag++;
         }
     }
-    a
 
-    if(flag == 1){
+    if(flag >= 2){
         printf("?");
     }
     else{
